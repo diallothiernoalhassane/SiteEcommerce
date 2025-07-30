@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrateur</title>
+    <link rel="stylesheet" href="../LeCss/style.css">
+</head>
+<body>
+    <a href="./index.html" class="ma-boutique">Boutique</a>
+    <h2 class="en-tete-produit">Ajouter un produit</h2>
+    
+<form id="form-ajout">
+  <input type="text" id="titre" placeholder="Titre" required>
+  <input type="number" id="prix" placeholder="Prix" required>
+  <input type="text" id="image" placeholder="Lien de l’image" required>
+  <input type="text" id="categorie" placeholder="Catégorie" required>
+  <button type="submit">Ajouter</button>
+</form>
+
+<h2>Produits existants</h2>
+<div id="admin-produits"></div>
+
+
+<script src="../LeJs/admin.js"></script>
+</body>
+</html>
