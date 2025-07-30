@@ -360,6 +360,15 @@ h3 {
   align-items: center;
 }
 
+@media screen and (max-width: 412px) {
+  .categorie-container div {
+    width: 90% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+  }
+}
+
+
 /* Image produit */
 .imag {
   width: 100%;
@@ -372,6 +381,20 @@ h3 {
 .imag:hover {
   transform: rotateY(180deg); /* rotation horizontale sur l’axe Y */
 }
+
+
+@media screen and (max-width: 400px) {
+  .categorie-container div {
+    width: 200px; /* élargit le bloc produit */
+  }
+
+  .categorie-container .imag {
+    width: 100%;
+    max-width: 180px;
+    margin: auto;
+  }
+}
+
 
 /* Étoiles */
 .categorie-container div .etoiles {
@@ -428,69 +451,101 @@ h3 {
   /* margin: 0 auto; CENTRÉ 
 } */
 
-
-
-/* Le de la page Panier: */
-/* -------------------- */
-/* Le de la page Panier: */
-
-body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+.item-panier {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-#contenu-panier{
-padding: 10px;
-margin-top: 18px;
-border: 2px solid grey;
-border-radius: 10px;
-box-shadow: 0 4px 10px;
-}
-#contenu-panier .item-panier {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
-}
 .item-panier img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
+  width: 100px;
+  height: auto;
+  object-fit: cover;
 }
 
-.item-panier input {
-      width: 50px;
+.item-panier p,
+.item-panier span,
+.item-panier button,
+.item-panier .quantite-control {
+  flex: 1 1 auto;
+  min-width: 100px;
+  text-align: center;
 }
 
-.supprimer {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 3px 8px;
-      cursor: pointer;
+.quantite-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-#total {
-      font-weight: bold;
-      margin-top: 20px;
+.quantite-control input {
+  width: 50px;
+  text-align: center;
 }
-@media screen and (max-width:470px) {
-    .item-panier input{
-        width: 30px;
-    }
-    .supprimer p{
-        font-size: 8px;
-    }
+
+@media screen and (max-width: 600px) {
+  .item-panier {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-panier img {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .quantite-control {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .item-panier button.supprimer {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
-@media screen and (max-width:395px){
-    .item-panier .prix{
-        font-size: .5rem;
-    }
-    .item-panier p{
-    font-size: .5rem;
+
+
+/* Code ajouté tout de suite */
+.quantite-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
+
+.quantite-control button {
+  background-color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
 }
+
+.quantite-control input.quantite {
+  width: 40px;
+  text-align: center;
+}
+
+.quantite-control.plus{
+    font-size: 15px;
+}
+/* Pour masquer le fléches au niveau du panier: */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;  /*Firefox*/
+}
+
 
 /* La page administrateur: */
 /* ----------------------- */
@@ -568,6 +623,14 @@ box-shadow: 0 4px 10px;
   display: inline-block;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 359px) {
+  .admin-produit {
+    width: 90% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+  }
 }
 
 /* La responsivité: */
