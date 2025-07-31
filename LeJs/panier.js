@@ -27,6 +27,7 @@ burgerBtn.addEventListener("click", () => {
 });
 
 // Le script du panier:
+
 let panier = JSON.parse(localStorage.getItem("panier")) || [];
 
 function afficherPanier() {
@@ -50,7 +51,7 @@ function afficherPanier() {
         <input type="number" value="${item.quantite}" min="1" data-index="${index}" class="quantite" />
         <button class="plus" data-index="${index}">+</button>
       </div>
-      <span class="prix">${item.prix} €</span>
+      <span class="prix">${item.prix} GNF</span>
       <button class="supprimer" data-index="${index}"><p>Supprimer</p></button>
     `;
     container.appendChild(div);
@@ -61,7 +62,7 @@ function afficherPanier() {
 
 function calculerTotal() {
   const total = panier.reduce((somme, item) => somme + item.prix * item.quantite, 0);
-  document.getElementById("total").textContent = `Total: ${total.toFixed(2)} €`;
+  document.getElementById("total").textContent = `Total: ${total.toFixed(2)} GNF`;
 }
 
 // Supprimer un produit
