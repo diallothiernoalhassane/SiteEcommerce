@@ -625,6 +625,12 @@ input[type="number"] {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+@media screen and (max-width: 415px){
+  .admin-produit{
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 359px) {
   .admin-produit {
     width: 90% !important;
