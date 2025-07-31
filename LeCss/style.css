@@ -271,7 +271,7 @@ footer a:hover{
     left: 0;
     flex-direction: column;
     box-shadow: 0 5px 0 rgba(0, 0, 0.2);
-    width: 23%;
+    width: 100%;
     padding: 0.1rem;
     transition: .5s ease-in-out;
     z-index: 800;
