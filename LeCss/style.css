@@ -510,7 +510,10 @@ h3 {
     margin-top: 10px;
   }
 }
-
+.supprimer{
+  height: 5vh;
+  color: red;
+}
 
 /* Code ajouté tout de suite */
 .quantite-control {
@@ -544,7 +547,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;  /*Firefox*/
-}
+} 
 
 
 /* La page administrateur: */
